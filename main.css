@@ -1,0 +1,51 @@
+ body {
+     width: 345px;
+     height: 600px;
+ }
+
+ .header {
+     width: 100%;
+     height: 10px;
+     position: fixed;
+     top: 0px;
+     left: 0;
+     font-family: 'Lobster', cursive;
+     text-align: center;
+     color: black !important;
+ }
+
+ #frequency {
+     height: calc(100vh - 100px);
+     overflow: auto;
+     position: relative;
+ }
+
+ footer {
+     background-color: yellow;
+     position: fixed;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     height: 50px;
+ }
+
+ td,
+ th {
+     font-size: 0.95rem;
+     border-radius: 0px;
+     width: 25% !important;
+ }
+
+ .toast-container {
+     top: auto !important;
+     right: auto !important;
+     bottom: 90vh;
+     opacity: 20%;
+     display: flex;
+     flex-direction: column;
+     font-size: 1.25rem;
+ }
+
+ .tooltipped {
+     cursor: help;
+ }

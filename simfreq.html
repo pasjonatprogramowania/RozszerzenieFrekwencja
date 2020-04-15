@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title></title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="materialize.min.js"></script>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-wrapper white">
+            <a href="#!" class="brand-logo header">Frekwencja</a>
+            <a href="#" data-target="mobile" class="sidenav-trigger black-text"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+
+    <ul class="sidenav black-text" id="mobile">
+        <li><a href="index.html">Roczna</a></li>
+        <li><a href="fsemestr.html">Semestr I</a></li>
+        <li><a href="ssemestr.html">Semestr II</a></li>
+        <!--
+        <li><a href="simfreq.html">Symulaotr Frekwencji</a></li>
+        <li><a href="settings.html">Ustawienia</a></li>
+        <li><a href="info.html">Informacje</a></li>
+-->
+    </ul>
+    <div id="frequency" class="col s12">
+        <h6 id="lastOpenDate" style="display: none" class="center-align"></h6>
+        <table class="highlight">
+            <thead>
+                <tr class="teal lighten-2 z-depth-1">
+                    <th class="center-align">Nazwa Przedmiotu</th>
+                    <th class="center-align">Ilosc godzin</th>
+                    <th class="center-align">Godziny</br>Nieobecne</th>
+                    <th class="center-align tooltipped" data-tooltip="Przyblizona frekwencja roczna">Frekwencja<i class="material-icons">info_outline</i></th>
+                </tr>
+            </thead>
+            <tbody id="frequencyTable">
+                <!-- Icons link: https://icons8.com -->
+            </tbody>
+        </table>
+
+        <div class="section">
+            <footer>
+                <div class="center-align row">
+                    <a class="col s12 waves-effect waves-light btn-large" data-position="top" data-tooltip="Zapisz zmiany">Zapisz</a>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script type="module" src="ssemestr.js"></script>
+</body>
+
+</html>
