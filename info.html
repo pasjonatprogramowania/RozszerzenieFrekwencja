@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title></title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="materialize.min.js"></script>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <script src="all.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="all.min.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper white">
+            <a href="#" class="brand-logo header">Informacje</a>
+            <a href="#" data-target="mobile" class="sidenav-trigger black-text"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+
+    <ul class="sidenav black-text" id="mobile">
+        <li><a href="index.html">Frekwencja Roczna</a></li>
+        <li><a href="fsemestr.html">Frekwencja Semestr I</a></li>
+        <li><a href="ssemestr.html">Frekwencja Semestr II</a></li>
+        <li><a href="simfreq.html">Symulator Frekwencji</a></li>
+        <li><a href="settings.html"><i class="material-icons">settings</i>Ustawienia (Alpha)</a></li>
+        <li><a href="info.html"><i class="material-icons">info_outline</i>Informacje i kontakt</a></li>
+
+    </ul>
+    <div id="frequency">
+        <div class="section">
+            <h5 class="center-align">Może cię to interesować</h5>
+        </div>
+        <ul class="collapsible flow-text">
+            <li>
+                <div class="collapsible-header"><i class="material-icons">mood</i>Kim jestem ?</div>
+                <div class="collapsible-body"><span>Część jestem twoim prywatnym kalkulatorem do obliczania frekwencji na platformie Librus. Moim celem jest pomoc ci w obliczeniu swojej frekwencji </span></div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons">info_outline</i>Skad ten błąd ?</div>
+                <div class="collapsible-body"><span>Obliczanie frekwencji odbywa się ze pomocą wzoru matematycznego. Efektem tego pojawia się błąd pomiarowy. Frekwencja podawana przez program może być do 10% wyższa od prawdziwej </span></div>
+            </li>
+            <li class="active">
+                <div class="collapsible-header"><i class="material-icons">thumb_up</i>A co ten błąd znaczy dla nas?</div>
+                <div class="collapsible-body"><span>Wartości podawane przez program można traktować jako wartości przybliżone. Czyli w momencie, w którym program pokazuje nam frekwencje 60% może to być dla nas informacja, aby zapytać naszego nauczyciela o dokładną frekwencje</span></div>
+            </li>
+            <!--
+            <li>
+                <div class="collapsible-header"><i class="material-icons">lock_outline</i>Jakie dane przechowujesz ?</div>
+                <div class="collapsible-body"><span>Nie przechowuje o tobie żadnych danych. Wszystkie informacje, które pobieram służą tylko do obliczeń twojej frekwencji i do wyświetlenia nazw przedmiotów. Dane te są przechowywane lokalnie u ciebie w przeglądarce </span></div>
+            </li>
+-->
+        </ul>
+        <div class="section flow-text center-align">
+            <div class="row">
+                Chciałbyś zerknąć na kod projektu ?
+                <div class="row">
+                    <a href="https://github.com/pasjonatprogramowania/RozszerzenieFrekwencja" target="_blank" class="flow-text"><i class="fab fa-github"></i> Github</a>
+                </div>
+                Zauważyłeś bład ?
+                <div class="row">
+                    Masz pytanie ?
+                    <div class="row">
+                        Masz propozycje zmian ?
+                        <div class="row">
+                            <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to&su" target="_blank" class="flow-text"><i class="fas fa-envelope-open"></i> paw.szew1234@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <footer>
+                <div class="center-align row">
+                    <a class="col s12 waves-effect waves-light btn-large" href="index.html">Wróć do Strony Głównej</a>
+                </div>
+            </footer>
+        </div>
+        <script src="jquery-3.4.1.min.js"></script>
+        <script src="info.js"></script>
+</body>
+
+</html>

@@ -1,33 +1,35 @@
 import {
-    semestrPresent,
-    createTable,
-    createSvg,
-    setup,
-    saveChanges
+    setup
 } from "/popup.js"
 
 //Błogosławienie ci którzy nie rozumieli po co te pentle i zmienne a uwierzyli 
 document.addEventListener('laod', getBackupObjectFrequency());
 
-/*Do naprawy load dokumentu*/
-
 function getBackupObjectFrequency() {
     let bgpage = chrome.extension.getBackgroundPage();
-    let objectFrequency = bgpage.objectFrequency;
+    let objectFrequency = bgpage.yearObjectFrequency;
 
-    let promis = new Promise((resolve) => {
-        chrome.storage.local.get("objectFrequency", (result) => {
-            resolve(result["objectFrequency"])
+    let promisFrequency = new Promise((resolve) => {
+        chrome.storage.local.get("yearObjectFrequency", (result) => {
+            resolve(result["yearObjectFrequency"])
         });
     });
-    let dataToLoad;
-    promis.then(data => {
-        dataToLoad = data;
-    }).then(() => {
-        setup(dataToLoad, objectFrequency, "frequency", "lessPerWeek", 37);
+    let promisSettings = new Promise((resolve) => {
+        chrome.storage.local.get("settings", (result) => {
+            resolve(result["settings"])
+        });
     });
+    let backup;
+    promisFrequency.then(data => {
+        backup = data;
+    })
+    let settings;
+    promisSettings.then(data => {
+        settings = data
+    }).then(() => {
+        setup(backup, objectFrequency, settings);
+    })
 }
-
 //Materilize css Navbar
 document.addEventListener('DOMContentLoaded', function () {
     let elems = document.querySelectorAll('.sidenav');
@@ -52,7 +54,5 @@ document.querySelector('a.btn-large').addEventListener('click', () => {
 });
 
 /*To Do
-- Dodaj date ostatnirgo pobrania elementu do htmla 
-- Popraw tooltipy Bład moze polegac na kolejnosci inicjalizacji najpierw moze zainicjowany musi byc ten obiekt do którego chce sie odwołac
-- Sanityzacaj wpisanej wartosci przez usera
+
 */

@@ -30,14 +30,13 @@
     </nav>
 
     <ul class="sidenav black-text" id="mobile">
-        <li><a href="index.html">Roczna</a></li>
-        <li><a href="fsemestr.html">Semestr I</a></li>
-        <li><a href="ssemestr.html">Semestr II</a></li>
-        <!--
-        <li><a href="simfreq.html">Symulaotr Frekwencji</a></li>
-        <li><a href="settings.html">Ustawienia</a></li>
-        <li><a href="info.html">Informacje</a></li>
--->
+        <li><a href="index.html">Frekwencja Roczna</a></li>
+        <li><a href="fsemestr.html">Frekwencja Semestr I</a></li>
+        <li><a href="ssemestr.html">Frekwencja Semestr II</a></li>
+        <li><a href="simfreq.html">Symulator Frekwencji</a></li>
+        <li><a href="settings.html"><i class="material-icons">settings</i>Ustawienia (Alpha)</a></li>
+        <li><a href="info.html"><i class="material-icons">info_outline</i>Informacje i kontakt</a></li>
+
     </ul>
     <div id="frequency" class="col s12">
         <h6 id="lastOpenDate" style="display: none" class="center-align"></h6>
@@ -45,9 +44,9 @@
             <thead>
                 <tr class="teal lighten-2 z-depth-1">
                     <th class="center-align">Nazwa Przedmiotu</th>
-                    <th class="center-align">Ilosc godzin</th>
+                    <th class="center-align">Ilość godzin</th>
                     <th class="center-align">Godziny</br>Nieobecne</th>
-                    <th class="center-align tooltipped" data-tooltip="Przyblizona frekwencja roczna">Frekwencja<i class="material-icons">info_outline</i></th>
+                    <th class="center-align tooltipped" data-tooltip="Przyblizona frekwencja błąd pomiarowy poniżej 10%">Frekwencja<i class="material-icons">info_outline</i></th>
                 </tr>
             </thead>
             <tbody id="frequencyTable">

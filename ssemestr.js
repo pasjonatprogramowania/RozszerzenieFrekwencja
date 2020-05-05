@@ -1,9 +1,5 @@
 import {
-    semestrPresent,
-    createTable,
-    createSvg,
     setup,
-    saveChanges
 } from "/popup.js"
 
 //Błogosławienie ci którzy nie rozumieli po co te pentle i zmienne a uwierzyli 
@@ -11,18 +7,28 @@ document.addEventListener('load', getBackupObjectFrequency());
 
 function getBackupObjectFrequency() {
     let bgpage = chrome.extension.getBackgroundPage();
-    let objectFrequency = bgpage.objectFrequency;
+    let objectFrequency = bgpage.secondObjectFrequency;
 
-    let promis = new Promise((resolve) => {
-        chrome.storage.local.get("objectFrequency", (result) => {
-            resolve(result["objectFrequency"])
+    let promisFrequency = new Promise((resolve) => {
+        chrome.storage.local.get("secondObjectFrequency", (result) => {
+            resolve(result["secondObjectFrequency"])
         });
     });
-    let dataToLoad;
-    promis.then(data => {
-        dataToLoad = data;
+    let promisSettings = new Promise((resolve) => {
+        chrome.storage.local.get("settings", (result) => {
+            resolve(result["settings"])
+        });
+    });
+
+    let backup;
+    promisFrequency.then(data => {
+        backup = data;
+    })
+    let settings;
+    promisSettings.then(data => {
+        settings = data
     }).then(() => {
-        setup(dataToLoad, objectFrequency, "frequencySecondSemestr", "lessPerWeekSecond", 20);
+        setup(backup, objectFrequency, settings);
     })
 }
 

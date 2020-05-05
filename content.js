@@ -11,8 +11,14 @@ if (window.location.href === "https://synergia.librus.pl/przegladaj_oceny/uczen"
     const lessonIndex = lessonText.findIndex(element => element.includes("Zachowanie"));
     lessonText = lessonText.filter(element => lessonText.splice(lessonIndex));
 
+    lessonText.forEach((item, index) => {
+        if (item.includes("<")) {
+            item = item.replace(/<\s*[^>]*>.*/gi, "");
+            lessonText[index] = item;
+        }
+    });
     localStorage.setItem("lessonText", JSON.stringify(lessonText));
-    console.log(JSON.parse(localStorage.getItem("lessonText")));
+    //    console.log(JSON.parse(localStorage.getItem("lessonText")));
 }
 if (window.location.href === "https://synergia.librus.pl/przegladaj_nb/uczen") {
 
@@ -60,21 +66,54 @@ if (window.location.href === "https://synergia.librus.pl/przegladaj_nb/uczen") {
     let lastOpenDate = today.getDate() + '.' + (today.getMonth() + 1) + '.' + today.getFullYear();
 
 
-    let objectFrequency = [];
+    let yearObjectFrequency = [];
+    let firstObjectFrequency = [];
+    let secondObjectFrequency = [];
+    let simObjectFrequency = [];
     for (i = 0; i < localStorageLessonText.length; i++) {
-        objectFrequency.push({
+        yearObjectFrequency.push({
             lastOpenDate: lastOpenDate,
             lessonName: localStorageLessonText[i],
             frequency: yearFrequency[i],
             lessPerWeek: 1,
-            frequencyFirstSemestr: firstSemestrFrequency[i],
-            lessPerWeekFirst: 1,
-            frequencySecondSemestr: secondSemestrFrequency[i],
-            lessPerWeekSecond: 1
+            present: 1,
+            type: "y",
+            week: 37
+        });
+        firstObjectFrequency.push({
+            lastOpenDate: lastOpenDate,
+            lessonName: localStorageLessonText[i],
+            frequency: firstSemestrFrequency[i],
+            lessPerWeek: 1,
+            present: 1,
+            type: "f",
+            week: 20
+        });
+        secondObjectFrequency.push({
+            lastOpenDate: lastOpenDate,
+            lessonName: localStorageLessonText[i],
+            frequency: secondSemestrFrequency[i],
+            lessPerWeek: 1,
+            present: 1,
+            type: "s",
+            week: 17
+        });
+        simObjectFrequency.push({
+            lastOpenDate: lastOpenDate,
+            lessonName: localStorageLessonText[i],
+            frequency: 0,
+            lessPerWeek: 1,
+            present: 1,
+            type: "sim",
+            week: 37
         });
     }
 
-    chrome.runtime.sendMessage(objectFrequency);
+
+    chrome.runtime.sendMessage(yearObjectFrequency);
+    chrome.runtime.sendMessage(firstObjectFrequency);
+    chrome.runtime.sendMessage(secondObjectFrequency);
+    chrome.runtime.sendMessage(simObjectFrequency);
 }
 
 function sliceSemestrFrequency(freq, start, end) {
