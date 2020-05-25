@@ -89,7 +89,13 @@ function saveSettings(checkbox, objectFrequency) {
     let stateValue;
     let lessonToHide = [];
     if (checkbox.includes("state")) {
-        stateValue = document.querySelector("#value").value;
+        if (Math.abs(Math.round(document.querySelector("#value").value)) > 10) {
+            stateValue = 10;
+            document.querySelector("#value").value = stateValue;
+        } else {
+            stateValue = Math.abs(Math.round(document.querySelector("#value").value));
+            document.querySelector("#value").value = stateValue;
+        }
     }
     if (checkbox.includes("hide")) {
         let dummyLessonToHide = [];

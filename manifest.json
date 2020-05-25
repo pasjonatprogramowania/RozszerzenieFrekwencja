@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Frekwencja Librus",
-    "version": "1.0",
+    "version": "1.1",
     "content_scripts": [
         {
             "matches": [
@@ -21,7 +21,9 @@
           "storage"
         ],
     "icons": {
-        "48": "icon.png"
+        "48": "img/48x48img.png",
+        "64": "img/64x64img.png",
+        "126": "img/128x128img.png"
     },
     "browser_action": {
         "default_popup": "index.html",

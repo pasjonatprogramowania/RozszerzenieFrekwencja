@@ -7,24 +7,23 @@
 
     <title></title>
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="materialize.min.css">
+    <link href="materialize.min.css" rel="stylesheet">
     <!-- Compiled and minified JavaScript -->
     <script src="materialize.min.js"></script>
     <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="main.css" />
-</head>
+    <link href="material-icon.css" rel="stylesheet">
+    <link href="lobster.css" rel="stylesheet">
+    <link href="open-sans.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet" type="text/css" />
+    <script src="all.min.js" crossorigin="anonymous"></script>
+    <link href="all.min.css" rel="stylesheet">
+
 </head>
 
 <body>
-
     <nav>
         <div class="nav-wrapper white">
-            <a href="#
-            
-            " class="brand-logo header">Frekwencja Roczna</a>
+            <a href="#" class="brand-logo header">Frekwencja Roczna</a>
             <a href="#" data-target="mobile" class="sidenav-trigger black-text"><i class="material-icons">menu</i></a>
         </div>
     </nav>
@@ -46,7 +45,9 @@
                     <th class="center-align">Nazwa Przedmiotu</th>
                     <th class="center-align">Ilość godzin</th>
                     <th class="center-align">Godziny</br>Nieobecne</th>
-                    <th class="center-align tooltipped" data-tooltip="Przyblizona frekwencja błąd pomiarowy poniżej 10%">Frekwencja<i class="material-icons">info_outline</i></th>
+                    <th class="center-align tooltipped"
+                        data-tooltip="Przyblizona frekwencja błąd pomiarowy poniżej 10%">Frekwencja<i
+                            class="material-icons">info_outline</i></th>
                 </tr>
             </thead>
             <tbody id="frequencyTable">
@@ -57,7 +58,8 @@
         <div class="section">
             <footer>
                 <div class="center-align row">
-                    <a class="col s12 waves-effect waves-light btn-large" data-position="top" data-tooltip="Zapisz zmiany">Zapisz</a>
+                    <a class="col s12 waves-effect waves-light btn-large" data-position="top"
+                        data-tooltip="Zapisz zmiany">Zapisz</a>
                 </div>
             </footer>
         </div>
