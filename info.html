@@ -2,24 +2,23 @@
 <html lang="">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title></title>
     <!-- Compiled and minified CSS -->
-    <link href="materialize.min.css" rel="stylesheet">
+    <link href="materialize.min.css" rel="stylesheet" />
     <!-- Compiled and minified JavaScript -->
     <script src="materialize.min.js"></script>
     <!--Import Google Icon Font-->
-    <link href="material-icon.css" rel="stylesheet">
-    <link href="lobster.css" rel="stylesheet">
-    <link href="open-sans.css" rel="stylesheet">
-    <link href="main.css" rel="stylesheet" type="text/css">
+    <link href="material-icon.css" rel="stylesheet" />
+    <link href="lobster.css" rel="stylesheet" />
+    <link href="open-sans.css" rel="stylesheet" />
+    <link href="main.css" rel="stylesheet" type="text/css" />
     <script src="all.min.js" crossorigin="anonymous"></script>
-    <link href="all.min.css" rel="stylesheet">
-    <link href="fontawesome.min.css">
+    <link href="all.min.css" rel="stylesheet" />
+    <link href="fontawesome.min.css" />
     <script src="fontawesome.min.js"></script>
-
 </head>
 
 <body>
@@ -29,14 +28,22 @@
             <a href="#" class="sidenav-trigger black-text" data-target="mobile"><i class="material-icons">menu</i></a>
         </div>
     </nav>
-
     <ul class="sidenav black-text" id="mobile">
-        <li><a href="index.html">Frekwencja Roczna</a></li>
+        <li><a href="index.html">Asystent Librus</a></li>
+        <li><a href="ysemestr.html">Frekwencja Roczna</a></li>
         <li><a href="fsemestr.html">Frekwencja Semestr I</a></li>
         <li><a href="ssemestr.html">Frekwencja Semestr II</a></li>
         <li><a href="simfreq.html">Symulator Frekwencji</a></li>
-        <li><a href="settings.html"><i class="material-icons">settings</i>Ustawienia (Alpha)</a></li>
-        <li><a href="info.html"><i class="material-icons">info_outline</i>Informacje i kontakt</a></li>
+        <li><a href="average.html">Średnia Ważona</a></li>
+        <li>
+            <a href="proviteAverage.html">Ile brakuje do ...</a>
+        </li>
+        <li>
+            <a href="settings.html"><i class="material-icons">settings</i>Ustawienia</a>
+        </li>
+        <li>
+            <a href="info.html"><i class="material-icons">info_outline</i>Informacje i kontakt</a>
+        </li>
 
     </ul>
     <div id="frequency">
@@ -45,23 +52,144 @@
         </div>
         <ul class="collapsible flow-text">
             <li>
-                <div class="collapsible-header"><i class="material-icons">mood</i>Kim jestem ?</div>
-                <div class="collapsible-body"><span>Część jestem twoim prywatnym kalkulatorem do obliczania frekwencji na platformie Librus. Moim celem jest pomoc ci w obliczeniu swojej frekwencji </span></div>
-            </li>
-            <li>
-                <div class="collapsible-header"><i class="material-icons">info_outline</i>Skad ten błąd ?</div>
-                <div class="collapsible-body"><span>Obliczanie frekwencji odbywa się ze pomocą wzoru matematycznego. Efektem tego pojawia się błąd pomiarowy. Frekwencja podawana przez program może być do 10% wyższa od prawdziwej </span></div>
+                <div class="collapsible-header">
+                    <i class="material-icons">stars</i>Co umiesz ?
+                </div>
+                <div class="collapsible-body">
+                    <span>
+                        <p>
+                            Umiem kilka sztuczek
+                        </p>
+                        <p>
+                            -Obliczam twoja frekwencje roczną i semestralną
+                        </p>
+                        <p>
+                            -Obliczam twoja średnią ważną, obliczanie ile brakuje ci do wymarzonej średniej i dodaje
+                            opcje dodawania symulacyjnych ocen na Librusie
+                        </p>
+                        <p>
+                            Aby ułatwić ci korzystanie z Librusa umożliwiam ci podgląd w rozszerzeniu frekwencji i
+                            średniej
+                            ważonej z
+                            ostatniego logowania.
+                        </p>
+                    </span>
+                </div>
             </li>
             <li class="active">
-                <div class="collapsible-header"><i class="material-icons">thumb_up</i>A co ten błąd znaczy dla nas ?</div>
-                <div class="collapsible-body"><span>Wartości podawane przez program można traktować jako wartości przybliżone. Czyli w momencie, w którym program pokazuje nam frekwencje 60% może to być dla nas informacja, aby zapytać naszego nauczyciela o dokładną frekwencje. Można zwiększyć dokładność programu za pomocą opcji "odejmij stałą" spowoduje to że przewidywana frekwencja będzie bliższa prawdziwej</span></div>
+                <div class="collapsible-header">
+                    <i class="material-icons">mood</i>Kim jestem ?
+                </div>
+                <div class="collapsible-body">
+                    <span>Część jestem twoim prywatnym kalkulatorem do obliczania
+                        frekwencji oraz średniej ważonej z ocen na platformie Librus. Moim
+                        celem jest pomoc ci w sprawniejszym i przyjemniejszym używaniu
+                        Librusa 😄</span>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">favorite</i>Jak obliczasz
+                    frekwencje ?
+                </div>
+                <div class="collapsible-body">
+                    <span>Frekwencja obliczana jest za pomocą wzoru. Ilość lekcji w
+                        tygodniu razy ilość tygodni w semestrze lub roku dzielone przez
+                        ilość nieobecności</span>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">info_outline</i>Skad ten błąd przy
+                    frekwencji ?
+                </div>
+                <div class="collapsible-body">
+                    <span>Wynika to z tego że każdy przedmiot ma trochę inną całkowitą ilość godzin w roku szkolnym.
+                        Zadaniem programu jest za pomocą wzoru matematycznego wyliczenie jak najbliższej wartości
+                        procentowej.
+                        Jednak przez użycie wzoru matematycznego pojawia się błąd pomiarowy. Frekwencja podawana przez
+                        program może być do 10% wyższa od prawdziwej
+                    </span>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">thumb_up</i>A co ten błąd znaczy dla nas ?
+                </div>
+                <div class="collapsible-body">
+                    <span>Wartości podawane przez program można traktować jako wartości
+                        przybliżone. Czyli w momencie, w którym program pokazuje nam
+                        frekwencje 60% może to być dla nas informacja, aby zapytać naszego
+                        nauczyciela o dokładną frekwencje. Można zwiększyć dokładność
+                        programu za pomocą opcji "odejmij stałą" spowoduje to że
+                        przewidywana frekwencja będzie bliższa prawdziwej</span>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">favorite_border</i>Jak obliczasz średnią
+                    ważną ?
+                </div>
+                <div class="collapsible-body">
+                    <span>Średnia ważona obliczana jest również ze wzoru matematycznego.
+                        Mnożymy twoje oceny przez ich wagę i dzielimy przez ich ilość. Tak
+                        to takie proste! Oryginalny kod został napisany przez Dominika
+                        Szpilskiego. Ze wsparciem i za zgodą autora jest on teraz dostępny
+                        na nową wersje Librusa</span>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">assignment</i>Jak obliczasz średnia roczną ?
+                </div>
+                <div class="collapsible-body">
+                    <span>
+                        Jest to bardzo proste pobieram twoje oceny końcowo roczne dodaje je do siebie i dzieli przez
+                        ilość twoich przedmiotów. Jeśli nie masz ocen końcowo rocznych wykorzystam proponowane. Ale
+                        jeśli ich tez nie masz nie ma problemu w tym wypadku oblicze twoja ocenę z średniej ważonej
+                    </span>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">chat_bubble_outline</i>Po co to wszystko ?
+                </div>
+                <div class="collapsible-body">
+                    <span>
+                        <p>
+                            W środowisku programowania webowego rzeczą bardzo naturalna jest bezinteresowne dzielenie
+                            sie swoim kodem, projektami i wzajemna pomoc programistów innym programistą
+                        </p>
+                        <p>
+                            Uważam że dziennikowi Librus jest daleko do perfekcji. Na szczęście pojawiają się
+                            rozszerzenia, programy od uczniów które poprawiają ten dziennik i sprawiają ze jest
+                            trochę przyjaźniejszy uczniom. To rozszerzenie jest jakby zebraniem najpopularniejszych
+                            usprawnień dla librusa w jedno miejsce i dołożeniem kilku rzeczy od siebie
+                        </p>
+                        <p>
+                            Sam dostałem wiele wsparcia od innych wiec również chce podzielić sie tym czym umiem i
+                            mogę ,nawet jeśli jest to małe rozszerzenie do Librusa. Mam nadzieje że to rozszerzenie
+                            pomoże wam w przyjemniejszym i sprawniejszym
+                            korzystaniu z Librusa
+                        </p>
+                        <p>
+                            Serdeczne podziękowania kieruje dla wszystkich którzy pomogli w pisaniu tego kodu
+                        </p>
+                        <i>
+                            "Programowanie nie jest gra o sumie zerowej nauczenie czegoś innego programisty nie zabiera
+                            tego tobie. Cieszę się że mogę podzielić się tym co umiem ponieważ jestem w tej branży z
+                            miłości do programowania" ~John Carmack
+                        </i>
+                    </span>
+                </div>
             </li>
         </ul>
         <div class="section flow-text center-align">
             <div class="row">
                 Chciałbyś zerknąć na kod projektu ?
                 <div class="row">
-                    <a href="https://github.com/pasjonatprogramowania/RozszerzenieFrekwencja" target="_blank" class="flow-text"><i class="fab fa-github"></i> Github</a>
+                    <a href="https://github.com/pasjonatprogramowania/RozszerzenieFrekwencja" target="_blank"
+                        class="flow-text"><i class="fab fa-github"></i> Github</a>
                 </div>
                 Zauważyłeś bład ?
                 <div class="row">
@@ -69,7 +197,9 @@
                     <div class="row">
                         Masz propozycje zmian ?
                         <div class="row">
-                            <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to&su" target="_blank" class="flow-text"><i class="fas fa-envelope-open"></i> paw.szew1234@gmail.com</a>
+                            <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to&su" target="_blank"
+                                class="flow-text"><i class="fas fa-envelope-open"></i>
+                                paw.szew1234@gmail.com</a>
                         </div>
                     </div>
                 </div>
@@ -85,6 +215,7 @@
         </div>
         <script src="jquery-3.4.1.min.js"></script>
         <script src="info.js"></script>
+    </div>
 </body>
 
 </html>

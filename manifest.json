@@ -1,32 +1,27 @@
 {
-    "manifest_version": 2,
-    "name": "Frekwencja Librus",
-    "version": "1.1",
-    "content_scripts": [
-        {
-            "matches": [
-                "https://synergia.librus.pl/*",
-                "http://synergia.librus.pl/*"
-            ],
-            "js": [
-                "content.js",
-                "jquery-3.4.1.min.js"
-            ]
-        }
-    ],
-    "background": {
-        "scripts": ["bgscript.js"]
-    },
-    "permissions": [
-          "storage"
-        ],
-    "icons": {
-        "48": "img/48x48img.png",
-        "64": "img/64x64img.png",
-        "126": "img/128x128img.png"
-    },
-    "browser_action": {
-        "default_popup": "index.html",
-        "default_title": "Frekwencja Librus"
+  "manifest_version": 2,
+  "name": "Asystent Librus (Frekwencja i Średnia)",
+  "version": "2.3",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://synergia.librus.pl/*",
+        "http://synergia.librus.pl/*"
+      ],
+      "js": ["content.js", "jquery-3.4.1.min.js"]
     }
+  ],
+  "background": {
+    "scripts": ["bgscript.js"]
+  },
+  "permissions": ["storage"],
+  "icons": {
+    "48": "img/48x48img.png",
+    "64": "img/64x64img.png",
+    "126": "img/128x128img.png"
+  },
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Asystent Librus"
+  }
 }

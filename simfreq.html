@@ -23,19 +23,27 @@
 
     <nav>
         <div class="nav-wrapper white">
-            <a href="#!" class="brand-logo header">Frekwencja</a>
+            <a href="#!" class="brand-logo header">Symulator Frekwencji</a>
             <a href="#" data-target="mobile" class="sidenav-trigger black-text"><i class="material-icons">menu</i></a>
         </div>
     </nav>
 
     <ul class="sidenav black-text" id="mobile">
-        <li><a href="index.html">Frekwencja Roczna</a></li>
+        <li><a href="index.html">Asystent Librus</a></li>
+        <li><a href="ysemestr.html">Frekwencja Roczna</a></li>
         <li><a href="fsemestr.html">Frekwencja Semestr I</a></li>
         <li><a href="ssemestr.html">Frekwencja Semestr II</a></li>
         <li><a href="simfreq.html">Symulator Frekwencji</a></li>
-        <li><a href="settings.html"><i class="material-icons">settings</i>Ustawienia (Alpha)</a></li>
-        <li><a href="info.html"><i class="material-icons">info_outline</i>Informacje i kontakt</a></li>
-
+        <li><a href="average.html">Średnia Ważona</a></li>
+        <li>
+            <a href="proviteAverage.html">Ile brakuje do ...</a>
+        </li>
+        <li>
+            <a href="settings.html"><i class="material-icons">settings</i>Ustawienia</a>
+        </li>
+        <li>
+            <a href="info.html"><i class="material-icons">info_outline</i>Informacje i kontakt</a>
+        </li>
     </ul>
     <div id="frequency" class="col s12">
         <h6 id="lastOpenDate" style="display: none" class="center-align"></h6>
@@ -45,7 +53,9 @@
                     <th class="center-align">Nazwa Przedmiotu</th>
                     <th class="center-align">Ilość godzin</th>
                     <th class="center-align">Godziny</br>Nieobecne</th>
-                    <th class="center-align tooltipped" data-tooltip="Przyblizona frekwencja błąd pomiarowy poniżej 10%">Frekwencja<i class="material-icons">info_outline</i></th>
+                    <th class="center-align tooltipped"
+                        data-tooltip="Przyblizona frekwencja błąd pomiarowy poniżej 10%">Frekwencja<i
+                            class="material-icons">info_outline</i></th>
                 </tr>
             </thead>
             <tbody id="frequencyTable">
@@ -56,7 +66,8 @@
         <div class="section">
             <footer>
                 <div class="center-align row">
-                    <a class="col s12 waves-effect waves-light btn-large" data-position="top" data-tooltip="Zapisz zmiany">Zapisz</a>
+                    <a class="col s12 waves-effect waves-light btn-large" data-position="top"
+                        data-tooltip="Zapisz zmiany">Zapisz</a>
                 </div>
             </footer>
         </div>

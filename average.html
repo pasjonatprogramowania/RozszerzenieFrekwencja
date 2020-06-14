@@ -2,27 +2,27 @@
 <html lang="">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title></title>
     <!-- Compiled and minified CSS -->
-    <link href="materialize.min.css" rel="stylesheet">
+    <link href="materialize.min.css" rel="stylesheet" />
     <!-- Compiled and minified JavaScript -->
     <script src="materialize.min.js"></script>
     <!--Import Google Icon Font-->
-    <link href="material-icon.css" rel="stylesheet">
-    <link href="lobster.css" rel="stylesheet">
-    <link href="open-sans.css" rel="stylesheet">
+    <link href="material-icon.css" rel="stylesheet" />
+    <link href="lobster.css" rel="stylesheet" />
+    <link href="open-sans.css" rel="stylesheet" />
     <link href="main.css" rel="stylesheet" type="text/css" />
     <script src="all.min.js" crossorigin="anonymous"></script>
-    <link href="all.min.css" rel="stylesheet">
+    <link href="all.min.css" rel="stylesheet" />
 </head>
 
 <body>
     <nav>
         <div class="nav-wrapper white">
-            <a href="#!" class="brand-logo header">Frekwencja Semestr 1</a>
+            <a href="#!" class="brand-logo header">Średnia Ważona</a>
             <a href="#" data-target="mobile" class="sidenav-trigger black-text"><i class="material-icons">menu</i></a>
         </div>
     </nav>
@@ -50,11 +50,9 @@
             <thead>
                 <tr class="teal lighten-2 z-depth-1">
                     <th class="center-align">Nazwa Przedmiotu</th>
-                    <th class="center-align">Ilość godzin</th>
-                    <th class="center-align">Godziny</br>Nieobecne</th>
-                    <th class="center-align tooltipped"
-                        data-tooltip="Przyblizona frekwencja błąd pomiarowy poniżej 10%">Frekwencja<i
-                            class="material-icons">info_outline</i></th>
+                    <th class="center-align">Pierwszy semestr</th>
+                    <th class="center-align">Drugi Semestr</th>
+                    <th class="center-align">Roczna</th>
                 </tr>
             </thead>
             <tbody id="frequencyTable">
@@ -65,15 +63,13 @@
         <div class="section">
             <footer>
                 <div class="center-align row">
-                    <a class="col s12 waves-effect waves-light btn-large" data-position="top"
-                        data-tooltip="Zapisz zmiany">Zapisz</a>
+                    <a class="col s12 waves-effect waves-light btn-large" href="index.html">Asystent</a>
                 </div>
             </footer>
         </div>
-
     </div>
     <script src="jquery-3.4.1.min.js"></script>
-    <script type="module" src="fsemestr.js"></script>
+    <script type="module" src="average.js"></script>
 </body>
 
 </html>
