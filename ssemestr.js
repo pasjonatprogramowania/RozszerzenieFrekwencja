@@ -46,7 +46,7 @@ $("document").ready(function () {
 // Materialize css Toast
 document.querySelector('a.btn-large').addEventListener('click', () => {
     M.toast({
-        html: 'Zmiany zosatły zapisane',
+        html: 'Zmiany zostały zapisane',
         classes: 'toast-container',
         inDuration: 300,
         outDuration: 300
@@ -54,7 +54,7 @@ document.querySelector('a.btn-large').addEventListener('click', () => {
 });
 
 /*To Do
-- Dodaj date ostatnirgo pobrania elementu do htmla 
+- Dodaj date ostatnirgo pobrania elementu do htmla
 - Popraw tooltipy Bład moze polegac na kolejnosci inicjalizacji najpierw moze zainicjowany musi byc ten obiekt do którego chce sie odwołac
 - Sanityzacaj wpisanej wartosci przez usera
 */

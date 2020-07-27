@@ -29,9 +29,10 @@ export function createTable(objectFrequency) {
 }
 
 export function createSvg(val) {
+
     return (document.querySelector(val).innerHTML += `
-    <img src="error.png"> 
-    <!-- Grafiak https://icons8.com/ouch/illustration/cherry-list-is-empty-1 -->`);
+    <img src="img/error.png"> 
+    <!-- Grafika https://icons8.com/ouch/illustration/cherry-list-is-empty-1 -->`);
 }
 
 export function setup(backupObjectFrequency, objectFrequency, settings) {

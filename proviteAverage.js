@@ -32,25 +32,21 @@ function getBackupobjectAverage() {
 }
 
 function setup(backupObjectAverage, objectAverage, settings) {
-    try
-    {
+    try {
 
         console.log('objectAverage', objectAverage)
         console.log('backupObjectAverage', backupObjectAverage)
         console.log('settings', settings)
 
-        if (Array.isArray(objectAverage))
-        {
+        if (Array.isArray(objectAverage)) {
             console.log("Nie musze wczytywac backupu");
         } else if (
             !Array.isArray(objectAverage) &&
             backupObjectAverage != undefined
-        )
-        {
+        ) {
             console.log("Uwaga wczytuje backup");
             objectAverage = backupObjectAverage;
-        } else
-        {
+        } else {
             console.log("Nie znalazłem nic, dla bezpiecenstwa żucam wyjątkiem");
             throw new SyntaxError("Nie wykryto frekwencji");
         }
@@ -61,8 +57,7 @@ function setup(backupObjectAverage, objectAverage, settings) {
         let year = today.getFullYear();
         let contentLastOpenDate = `${day}.${month}.${year}`;
 
-        if (contentLastOpenDate != objectAverage[0].lastOpenDate)
-        {
+        if (contentLastOpenDate != objectAverage[0].lastOpenDate) {
             let selectorLastOpenDate = document.querySelector("#lastOpenDate");
             selectorLastOpenDate.style = "display:block";
             selectorLastOpenDate.innerHTML += `<div>Średnia z dnia: ${objectAverage[0].lastOpenDate}</div>`;
@@ -71,7 +66,7 @@ function setup(backupObjectAverage, objectAverage, settings) {
         let dataHtml = "";
         dataHtml += `
         <tr style="height:112px">
-            <td class="center-align lessonName">Frekwencja Roczna</td>
+            <td class="center-align lessonName">Średnia Roczna</td>
             <td class="center-align flow-text" >${(objectAverage[0].yearAverageProvite).toFixed(2)}</td> 
             <td class="center-align flow-text frequency"><input type="number" class="input-default-weight"></td>
             <td class="center-align flow-text present" name="compered">0</td>
@@ -82,8 +77,7 @@ function setup(backupObjectAverage, objectAverage, settings) {
         document
             .querySelector("div.center-align a")
             .addEventListener("click", () => saveChanges(objectAverage, settings));
-    } catch (err)
-    {
+    } catch (err) {
         document.querySelector("#frequency").innerHTML += `
         <img src="error.png"> 
         <!-- Grafiak https://icons8.com/ouch/illustration/cherry-list-is-empty-1 -->`;
@@ -95,22 +89,18 @@ function saveChanges(objectAverage, settings) {
     let goalAverage = Math.abs(goalSelector.value) * objectAverage[0].yearAverageRounded.length;
 
     let howMuchMissing = Math.round(goalAverage - objectAverage[0].yearAverageRoundedSume);
-    if (howMuchMissing >= 0)
-    {
-        if (goalSelector.value > 6)
-        {
+    if (howMuchMissing >= 0) {
+        if (goalSelector.value > 6) {
             goalAverage = Math.abs(6) * objectAverage[0].yearAverageRounded.length;
 
             howMuchMissing = Math.round(goalAverage - objectAverage[0].yearAverageRoundedSume);
             /*Wyswietl date pobrania */
-            document.querySelector(`td[name="compered"]`).innerHTML = howMuchMissing;
+            document.querySelector(`td[name="compered"]`).innerText = howMuchMissing;
             goalSelector.value = 6;
-        } else
-        {
-            document.querySelector(`td[name="compered"]`).innerHTML = howMuchMissing;
+        } else {
+            document.querySelector(`td[name="compered"]`).innerText = howMuchMissing;
         }
-    } else
-    {
+    } else {
         document.querySelector(`td[name="compered"]`).innerHTML = 0;
         goalSelector.value = 0;
     }
@@ -130,7 +120,7 @@ $("document").ready(function () {
 // Materialize css Toast
 document.querySelector('a.btn-large').addEventListener('click', () => {
     M.toast({
-        html: 'Zmiany zosatły zapisane',
+        html: 'Zmiany zostały zapisane',
         classes: 'toast-container',
         inDuration: 300,
         outDuration: 300
