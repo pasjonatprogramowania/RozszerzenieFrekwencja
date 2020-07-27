@@ -232,9 +232,6 @@ if (
             }
 
         }
-        console.log('librusIsFucked', librusIsFucked)
-
-        console.log('a', librusIsFucked)
         let dummy = arrayTitleRowIndex.filter(function (el) {
             return el != 0;
         });
@@ -269,7 +266,7 @@ if (
                     if (nazwa != true) {
                         Tabela[5].children[h].style.height = "26px";
                         var czybrakocen;
-                        czybrakocen = Tabela[5].children[h].children[j].innerHTML;
+                        czybrakocen = Tabela[5].children[h].children[j].innerText;
                         if (czybrakocen != "Brak ocen") {
                             var flaga = false;
                             var sumawag = 0;
@@ -383,7 +380,7 @@ if (
                             if (flaga == true) {
                                 var srednia = sumaocen / sumawag;
                                 Tabela[5].children[h].children[p].className = "center";
-                                Tabela[5].children[h].children[p].innerHTML =
+                                Tabela[5].children[h].children[p].innerText =
                                     Math.round(srednia * 100) / 100;
                                 Tabela[5].children[h].children[p].setAttribute(
                                     "sumaocen",
@@ -399,11 +396,11 @@ if (
                                 );
                             } else {
                                 Tabela[5].children[h].children[p].className = "center";
-                                Tabela[5].children[h].children[p].innerHTML = "-";
+                                Tabela[5].children[h].children[p].innerText = "-";
                             }
                         } else {
                             Tabela[5].children[h].children[p].className = "center";
-                            Tabela[5].children[h].children[p].innerHTML = "-";
+                            Tabela[5].children[h].children[p].innerText = "-";
                         }
                     }
                 }
@@ -450,7 +447,7 @@ if (
                             ].className = "center";
                             Tabela[5].children[h].children[
                                 Tabela[5].children[h].children.length + tabela.srednia_rok
-                            ].innerHTML = Math.round(sredniarok * 100) / 100;
+                            ].innerText = Math.round(sredniarok * 100) / 100;
                             Tabela[5].children[h].children[
                                 Tabela[5].children[h].children.length + tabela.srednia_rok
                             ].setAttribute("sumaocenrok", sumaocenrok);
@@ -466,11 +463,11 @@ if (
                             var czynan =
                                 Tabela[5].children[h].children[
                                     Tabela[5].children[h].children.length + tabela.srednia_rok
-                                ].innerHTML;
+                                ].innerText;
                             if (czynan == "NaN") {
                                 Tabela[5].children[h].children[
                                     Tabela[5].children[h].children.length + tabela.srednia_rok
-                                ].innerHTML = "-";
+                                ].innerText = "-";
                             }
                         }
                     }
@@ -500,7 +497,7 @@ if (
             element1.colSpan = "12";
             element1.className = "center";
             element1.style.background = "#dbdbdb";
-            element1.innerHTML =
+            element1.innerText =
                 "Średnia oraz Frekwencja obliczona dzięki oprogramowaniu Dominika Szpilskiego i Pawła Szewczyka";
             document.getElementsByTagName("TBODY")[5].appendChild(element);
             element.appendChild(element1);
@@ -550,7 +547,7 @@ if (
             for (var h = 0; h < Tabela[5].children.length - 3; h++) {
                 var nazwa = Tabela[5].children[h].hasAttribute("name");
                 if (nazwa != true) {
-                    var przedmiot = Tabela[5].children[h].children[1].innerHTML;
+                    var przedmiot = Tabela[5].children[h].children[1].innerText;
                     przedmioty_options +=
                         '<option value="' + h + '">' + przedmiot + "</option>";
                 }
@@ -613,14 +610,14 @@ if (
                     waga +
                     "<br>Dodano za pomocą rozszerzenia Librus Oświata w Radomiu";
                 aOcena.className = "ocena";
-                aOcena.innerHTML = ocena;
+                aOcena.innerText = ocena;
                 aOcena.addEventListener("click", deleteGrade, false);
                 spanOcena.appendChild(aOcena);
                 if (
-                    Tabela[5].children[przedmiot].children[nrKolumnyOcen].innerHTML ==
+                    Tabela[5].children[przedmiot].children[nrKolumnyOcen].innerText ==
                     "Brak ocen"
                 ) {
-                    Tabela[5].children[przedmiot].children[nrKolumnyOcen].innerHTML = "";
+                    Tabela[5].children[przedmiot].children[nrKolumnyOcen].innerText = "";
                 }
                 Tabela[5].children[przedmiot].children[nrKolumnyOcen].appendChild(
                     spanOcena
@@ -630,11 +627,11 @@ if (
             function toggleMenu() {
                 if (document.getElementById("libsr_menu").style.display == "none") {
                     document.getElementById("libsr_menu").style.display = "inline-block";
-                    document.getElementById("libsr_menu_button").innerHTML =
+                    document.getElementById("libsr_menu_button").innerText =
                         "Ukryj menu dodawania ocen";
                 } else {
                     document.getElementById("libsr_menu").style.display = "none";
-                    document.getElementById("libsr_menu_button").innerHTML =
+                    document.getElementById("libsr_menu_button").innerText =
                         "Pokaż menu dodawania ocen";
                 }
             }
@@ -660,8 +657,6 @@ if (
             `form:nth-child(5) > div > div > table > tbody > .line0:not([name="przedmioty_all"]) > td:nth-child(4),
     form:nth-child(5) > div > div > table > tbody > .line1:not([name="przedmioty_all"]) > td:nth-child(4)`
         );
-        console.log('firstSemestrAverageSelector', firstSemestrAverageSelector)
-
         let secondSemestrAverageSelector
         if (librusIsFucked.length == 8) {
             secondSemestrAverageSelector = document.querySelectorAll(
@@ -674,7 +669,6 @@ if (
     form:nth-child(5) > div > div > table > tbody > .line1:not([name="przedmioty_all"]) > td:nth-child(8)`
             );
         }
-        console.log('secondSemestrAverageSelector', secondSemestrAverageSelector)
 
         let yearAverageSelector;
         if (librusIsFucked.length == 8) {
@@ -684,7 +678,6 @@ if (
         } else if (librusIsFucked.length == 11) {
             yearAverageSelector = document.querySelectorAll(`#body > form:nth-child(5) > div > div > table > tbody > tr > td:nth-child(11)`);
         }
-        console.log('yearAverageSelector', yearAverageSelector)
 
         let firstSemestrAverage = [];
         let secondSemestrAverage = [];
@@ -737,7 +730,6 @@ if (
     form:nth-child(5) > div > div > table > tbody > .line1:not([name="przedmioty_all"]) > td:nth-child(12)`
             );
         }
-        console.log('yearProviteMarkSelector', yearProviteMarkSelector)
 
         let yearFinallMarkSelector;
         if (librusIsFucked.length == 8) {
@@ -747,7 +739,6 @@ if (
         } else if (librusIsFucked.length == 11) {
             yearFinallMarkSelector = document.querySelectorAll(`#body > form:nth-child(5) > div > div > table > tbody > tr:not([name="przedmioty_all"]) > td:nth-child(13)`);
         }
-        console.log('yearFinallMarkSelector', yearFinallMarkSelector)
 
         let yearProviteMark = [];
         let yearFinalMark = [];
@@ -817,7 +808,6 @@ if (
         yearAverageRounded = yearAverageRounded.filter(function (el) {
             return el != 0;
         });
-        console.log('yearAverageRounded', yearAverageRounded)
 
         let yearAverageRoundedSume = yearAverageRounded.reduce((previousValue, currentValue) => previousValue + currentValue);
 

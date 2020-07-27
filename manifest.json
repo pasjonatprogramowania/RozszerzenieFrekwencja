@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Asystent Librus (Frekwencja i Średnia)",
-    "version": "2.4",
+    "version": "2.5",
     "content_scripts": [
         {
             "matches": ["https://synergia.librus.pl/*", "http://synergia.librus.pl/*"],
