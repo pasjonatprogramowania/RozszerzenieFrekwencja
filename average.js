@@ -134,7 +134,7 @@ function setup(backupObjectAverage, objectAverage, settings) {
         }
     } catch (error) {
         document.querySelector("#frequency").innerHTML += `
-        <img src="error.png"> 
+        <img src="img/error.png"> 
         <!-- Grafiak https://icons8.com/ouch/illustration/cherry-list-is-empty-1 -->`;
     }
 }

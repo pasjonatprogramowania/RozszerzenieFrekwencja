@@ -79,7 +79,7 @@ function setup(backupObjectAverage, objectAverage, settings) {
             .addEventListener("click", () => saveChanges(objectAverage, settings));
     } catch (err) {
         document.querySelector("#frequency").innerHTML += `
-        <img src="error.png"> 
+        <img src="img/error.png"> 
         <!-- Grafiak https://icons8.com/ouch/illustration/cherry-list-is-empty-1 -->`;
     }
 }
